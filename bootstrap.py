@@ -44,7 +44,7 @@ class Bootstrapper(object):
         self._broadcast_socket.settimeout(BROADCAST_SOCKET_TIMEOUT)
         self._broadcast_socket.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
         self._broadcast_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-        self._broadcast_socket.bind(('<broadcast>', BROADCAST_PORT))
+        self._broadcast_socket.bind(('', BROADCAST_PORT))
         self._broadcast_response = []
         
         self._active = True
